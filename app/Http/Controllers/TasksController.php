@@ -22,9 +22,12 @@ class TasksController extends Controller
 
     public function create(Request $request)
     {
-        $this->validate($request, [
-            'characteristic'=> 'required|min:5|max:255',
+        $request->validate([
+            'characteristic'=> 'required|min:2|max:255',
         ]);
+
+        // 'characteristic' = >'required|unique:posts|max:255',
+        //     'body'=>'required',
         
 
     	$task = new Task();

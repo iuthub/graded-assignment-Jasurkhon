@@ -31,10 +31,10 @@
                   </div>
                  
                   @endif
-                  @if (count($errors) > 0)
+@if ($errors->any())
     <!-- Form Error List -->
     <div class="alert alert-danger">
-        <strong>Whoops! Something went wrong!</strong>
+        <strong>Error! Something went wrong!</strong>
 
         <br><br>
 
